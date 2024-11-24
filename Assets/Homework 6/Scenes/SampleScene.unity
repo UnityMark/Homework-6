@@ -6938,9 +6938,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 780930539908328605, guid: 91b0cb042d007704fb76316fd21cbb49, type: 3}
-  _transform: {fileID: 948671200}
+  _spawnPoint: {fileID: 948671200}
   _timer: {fileID: 384939337}
   _gameRules: {fileID: 1656615756}
+  _spawnCooldown: 10
 --- !u!1 &1011647567
 GameObject:
   m_ObjectHideFlags: 0
@@ -10228,9 +10229,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 780930539908328605, guid: 91b0cb042d007704fb76316fd21cbb49, type: 3}
-  _transform: {fileID: 1611074327}
+  _spawnPoint: {fileID: 1611074327}
   _timer: {fileID: 50730055}
   _gameRules: {fileID: 1656615756}
+  _spawnCooldown: 10
 --- !u!1001 &1622207934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10527,6 +10529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1656615757}
   - component: {fileID: 1656615756}
+  - component: {fileID: 1656615758}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -10546,11 +10549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907a7c2fb6dfcba4b8138c55d508322a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _winCondition: 1
-  _survivalTime: 5
-  _enemiesToKill: 1
-  _loseCondition: 1
-  _maxEnemies: 3
 --- !u!4 &1656615757
 Transform:
   m_ObjectHideFlags: 0
@@ -10566,6 +10564,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1656615758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656615755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa4da51196005bb4fbd3915423cc007f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameRules: {fileID: 1656615756}
+  _spawnEnemies:
+  - {fileID: 1611074330}
+  - {fileID: 1787599633}
+  - {fileID: 1003591164}
+  _spawnPlayer: {fileID: 1891984037}
+  _winCondition: 3
+  _loseCondition: 3
+  _needKillEnemy: 1
+  _needMaxEnemy: 3
+  _needSurviveTime: 5
 --- !u!1001 &1665519590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11837,9 +11858,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 780930539908328605, guid: 91b0cb042d007704fb76316fd21cbb49, type: 3}
-  _transform: {fileID: 1361484274}
+  _spawnPoint: {fileID: 1361484274}
   _timer: {fileID: 289474970}
   _gameRules: {fileID: 1656615756}
+  _spawnCooldown: 10
 --- !u!1001 &1799553286
 PrefabInstance:
   m_ObjectHideFlags: 0
